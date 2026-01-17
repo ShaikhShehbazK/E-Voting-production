@@ -35,8 +35,9 @@ const UpdateCandidate = ({ mode }) => {
     const partyVal = party.current.value;
 
     const rawToken = JSON.parse(localStorage.getItem('token'));
+    console.log("Raw token",rawToken)
     const token = rawToken ? JSON.parse(rawToken) : null;
-
+    console.log("token", token)
     if (!token) {
       toast.error('User is not authenticated.');
       return;
