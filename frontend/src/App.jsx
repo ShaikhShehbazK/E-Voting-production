@@ -128,7 +128,7 @@ function App() {
     const checkAuth = async () => {
       setAuthLoading(true);
       try {
-        const token = JSON.parse(localStorage.getItem('token'));
+        const token = localStorage.getItem('token');
 
         if (token) {
           setIsLoggedIn(true);
