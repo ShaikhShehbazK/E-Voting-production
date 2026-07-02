@@ -24,7 +24,7 @@ const Candidate = ({ name, party, userRole, _id, image }) => {
     }
 
     try {
-      const token = JSON.parse(localStorage.getItem('token'));
+      const token = localStorage.getItem('token');
       const header = {
         headers: { Authorization: `Bearer ${token}` },
       };
@@ -38,7 +38,7 @@ const Candidate = ({ name, party, userRole, _id, image }) => {
 
   const handleDelete = async (id) => {
     try {
-      const token = JSON.parse(localStorage.getItem('token'));
+      const token = localStorage.getItem('token');
       const header = {
         headers: { Authorization: `Bearer ${token}` },
       };
@@ -145,7 +145,7 @@ export default Candidate;
 //       navigate('/login');
 //     } else {
 //       try {
-//         const token = JSON.parse(localStorage.getItem('token'));
+//         const token = localStorage.getItem('token');
 
 //         const header = {
 //           headers: {
@@ -170,7 +170,7 @@ export default Candidate;
 //   const handleDelete = async (Id2) => {
 //     console.log(Id2);
 //     try {
-//       const token = JSON.parse(localStorage.getItem('token'));
+//       const token = localStorage.getItem('token');
 
 //       const header = {
 //         headers: {

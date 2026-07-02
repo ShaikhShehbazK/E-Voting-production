@@ -16,7 +16,7 @@ const CandidateList = () => {
     const fetchCandidates = async () => {
       setIsLoading(true);
       try {
-        const token = JSON.parse(localStorage.getItem('token'));
+        const token = localStorage.getItem('token');
         const header = {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -110,7 +110,7 @@ export default CandidateList;
 //   const [candidateList, setCandidatesList] = useState([]);
 
 //   useEffect(() => {
-//     // const token = JSON.parse(localStorage.getItem('token'));
+//     // const token = localStorage.getItem('token');
 
 //     // const header = {
 //     //   headers: {
@@ -121,7 +121,7 @@ export default CandidateList;
 //     fetch(`${Api}/candidate`, {
 //       method: 'GET',
 //       headers: {
-//         Authorization: `Bearer ${JSON.parse(localStorage.getItem('token'))}`,
+//         Authorization: `Bearer ${localStorage.getItem('token')}`,
 //       },
 //     })
 //       .then((res) => res.json())

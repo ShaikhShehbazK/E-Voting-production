@@ -22,7 +22,7 @@ const Profile = () => {
     const currentPasswordValue = currentPassword.current.value;
     const newPasswordValue = newPassword.current.value;
     try {
-      const token = JSON.parse(localStorage.getItem('token'));
+      const token = localStorage.getItem('token');
       console.log(isVoted);
       const header = {
         headers: {
@@ -53,7 +53,7 @@ const Profile = () => {
 
   useEffect(() => {
     try {
-      const token = JSON.parse(localStorage.getItem('token'));
+      const token = localStorage.getItem('token');
 
       const header = {
         headers: {

@@ -33,7 +33,7 @@ export default function Login() {
       toast.success('login Successfully');
       setIsLoggedIn(true);
       console.log('login successful:', response.data);
-      localStorage.setItem('token', JSON.stringify(response.data.token));
+      localStorage.setItem('token', response.data.token);
       navigate('/'); // Redirect to home page
       window.location.reload();
     } catch (error) {
